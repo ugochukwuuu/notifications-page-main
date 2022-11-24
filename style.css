@@ -1,0 +1,137 @@
+*,
+*::after,
+*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Plus Jakarta Sans";
+}
+:root{
+    --Red: hsl(1, 90%, 64%);
+    --Blue: hsl(219, 85%, 26%);
+    --White: hsl(0, 0%, 100%);
+    --Very-light-grayish-blue: hsl(210, 60%, 98%);
+    --Light-grayish-blue-uno: hsl(211, 68%, 94%);
+    --Light-grayish-blue-dos: hsl(205, 33%, 90%);
+    --Grayish-blue: hsl(219, 14%, 63%);
+    --Dark-grayish-blue: hsl(219, 12%, 42%);
+    --Very-dark-blue: hsl(224, 21%, 14%);
+}
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color:var(--Light-grayish-blue-uno);
+}
+main{
+    padding:  2em;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    gap: .5em;
+    max-width: 710px;
+    min-width: 300px;
+    border-radius: 5px;
+}
+header{
+    display: flex;
+    align-items: center;
+    margin-bottom: .5em;
+}
+.bg-blue{
+    background-color: var(--Blue);
+    color: white;
+    padding: 4px 14px;
+    border-radius: 5px;
+    margin-left: .7em;
+}
+.read{
+    margin-left: auto;
+    background-color: transparent;
+    border: none;
+    color: var(--Grayish-blue);
+    font-weight: 700;
+}
+.notification-block{
+    display: flex;
+    align-items: flex-start;
+    padding: 1em;
+}
+.notification-block img{
+    width: 2.5em;
+    margin-right: .8em;
+}
+.unchecked{
+    background-color: var(--Light-grayish-blue-uno);
+    border-radius: 5px;
+}
+.profile-name{
+    color: var(--very-dark-blue);
+}
+.profile-name, .embolden{
+    font-weight: 700;
+}
+.action{
+    color: var(--Grayish-blue);
+    margin: 0 4px;
+}
+.post{
+    color: var(--Dark-grayish-blue);
+}
+.group{
+    color: var(--Blue);
+}
+.action-time{
+    margin-top: .2em;
+    color: var(--Grayish-blue);
+}
+.message-container{
+    display: flex;
+    align-items: center;
+    gap: .3em;
+}
+.red-dot{   
+    width: .5em;
+    height: .5em;
+    background-color: var(--Red);
+    border-radius: 50%;
+}
+.private-message{
+    border: 1px solid var(--Grayish-blue);
+    padding: 1em;
+    margin-top: .6em;
+    border-radius: 5px;
+    color: var(--Grayish-blue);
+    font-weight: 500;
+    line-height: 1.5;
+}
+.square-chess__img{
+    margin-left: auto;
+}
+/* pointer cursor */
+ .read, .post,.group, .profile-name, .private-message{
+    cursor: pointer;
+ }
+
+ /*-----------*/
+
+ /* All hover states */
+
+ .profile-name:hover, .read:hover{
+    color: var(--Blue);
+    transition: .1s ease;
+ }
+ .private-message:hover{
+    background-color: var(--Light-grayish-blue-dos);
+    border: 1px solid var(--Light-grayish-blue-dos);
+    transition: .1s ease;
+ }
+  /*-----------*/
+
+  @media (max-width: 400px){
+    main{
+        padding: 1.5em;
+    }
+  }
